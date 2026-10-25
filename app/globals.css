@@ -1,0 +1,130 @@
+@import "tailwindcss";
+
+@theme {
+  --color-burgundy: #741B2A;
+  --color-burgundy-dark: #5F1624;
+  --color-burgundy-light: #8C2234;
+  --color-gold: #C9A23A;
+  --color-gold-hover: #D9B44A;
+  --color-gold-light: #E8D59E;
+  --color-cream: #F7F3ED;
+  --color-cream-dark: #EFE8DD;
+  --color-dark-text: #1E1E1E;
+  --color-muted-text: #555555;
+  
+  --font-serif: var(--font-playfair), 'Playfair Display', Georgia, serif;
+  --font-sans: var(--font-inter), 'Inter', system-ui, sans-serif;
+}
+
+:root {
+  --color-background: #F7F2E9;
+  --color-sidebar-bg: #17140F;
+  --color-header-bg: #FFFFFF;
+  --color-card-bg: #FFFFFF;
+  --color-input-bg: #FFFFFF;
+
+  --color-primary: #7A1F2B;
+  --color-primary-hover: #661923;
+  --color-primary-light: #F3E5E2;
+  --color-accent-gold: #C9A227;
+
+  --color-sidebar-text: #E7E2D8;
+  --color-sidebar-text-muted: #A8A196;
+  --color-sidebar-active-bg: #7A1F2B;
+  --color-sidebar-active-text: #FFFFFF;
+  --color-sidebar-hover-bg: #2A241C;
+
+  --color-text-primary: #1F1B16;
+  --color-text-secondary: #6B6459;
+  --color-text-muted: #9A9284;
+
+  --color-border: #E7E1D3;
+  --color-border-strong: #D8D0BE;
+
+  --color-success: #1E7D34;
+  --color-danger: #C0392B;
+
+  --color-info-bg: #E9F1FE;
+  --color-info-text: #1D4ED8;
+
+  --color-link: #2563EB;
+
+  --color-badge-gold-bg: #E8B923;
+  --color-badge-gold-text: #3A2A00;
+
+  --color-overlay: rgba(0, 0, 0, 0.75);
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+
+  --border-width: 1px;
+
+  --shadow-card: 0 1px 3px rgba(0,0,0,0.06);
+  --shadow-modal: 0 10px 30px rgba(0,0,0,0.25);
+  --shadow-header: 0 1px 2px rgba(0,0,0,0.05);
+
+  --background: #F7F3ED;
+  --foreground: #1E1E1E;
+}
+
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter), 'Inter', system-ui, sans-serif;
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100vw;
+}
+
+/* Prevent unwanted iOS/Android automatic viewport zooming on focus */
+@media screen and (max-width: 768px) {
+  input[type="text"],
+  input[type="number"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="date"],
+  select,
+  textarea {
+    font-size: 16px !important;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #5F1624;
+}
+::-webkit-scrollbar-thumb {
+  background: #C9A23A;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #D9B44A;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-out forwards;
+}
